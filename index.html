@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fingerprint</title>
+    <script src='core-estimator.js' defer></script>
+    <script src='valve.js' defer></script>
+    <script src='fingerprint.js' defer></script>
+    <style>
+        body {
+            height: 200vh;
+        }
+
+        .button-wrapper {
+            margin-top: 190vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #done {
+            width: 100px;
+        }
+
+        #result {
+            display: none;
+            margin-top: 20px;
+            width: 100%;
+            height: 100px;
+        }
+
+        #instructions {
+            text-shadow: white 0 0 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <span id='box' style='margin: calc(5px / 3); padding: calc(7em / 5); font-size: 5px; opacity: 0'>Lorem ipsum 🏁🎡.</span>
+    <span id='absolute-box' style='position: absolute; left: 3.1415px; top: 3.1415em; transform: rotate(33.3333deg);  opacity: 0'>Lorem ipsum 🏁🎡.</span>
+    <p id='instructions'>Scroll down to get the results.</p>
+
+    <div class='button-wrapper'>
+        <a id='link' download='fingerprint.json'>Please wait…</a>
+        <textarea id='result'></textarea>
+    </div>
+</body>
+</html>
